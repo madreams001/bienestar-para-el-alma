@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Funcional en Bienestar para el Alma - Multiespacio: martes y jueves 18:30 a 19:30hs, fuerza real para la vida real.">
+<title>Funcional — Bienestar para el Alma - Multiespacio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;0,600;0,700&family=Oswald:wght@500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--acero:#F1F3F4;--chapa:#E2E7EA;--tinta:#15191D;--tinta-suave:#3E4A52;--linea:#C4CDD3;--energia:#E8480C;--energia-suave:#FBD9C8;--negro:#15191D;--foco:#0B5FFF;--radio:6px;--ease:cubic-bezier(.23,1,.32,1);--font-cuerpo:"Karla",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-titulo:"Oswald",system-ui,sans-serif}
+[data-tema="oscuro"]{--acero:#14181C;--chapa:#1E2429;--tinta:#F4F6F7;--tinta-suave:#B9C4CB;--linea:#333D44;--energia:#FF6A2B;--energia-suave:#2B1B12;--foco:#8AB4FF}
+@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]){--acero:#14181C;--chapa:#1E2429;--tinta:#F4F6F7;--tinta-suave:#B9C4CB;--linea:#333D44;--energia:#FF6A2B;--energia-suave:#2B1B12;--foco:#8AB4FF}}
+*{box-sizing:border-box}body{margin:0;background:var(--acero);color:var(--tinta);font-family:var(--font-cuerpo);font-size:1.0625rem;line-height:1.6;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-family:var(--font-titulo);line-height:1;margin:0 0 .7rem;font-weight:700;letter-spacing:.005em;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,1.2rem + 9vw,7rem);line-height:.95;max-width:12ch;text-wrap:balance;overflow-wrap:break-word}h2{font-size:clamp(1.4rem,1.1rem + 1.4vw,2rem)}h3{font-size:1.05rem}p{margin:0 0 1rem;max-width:68ch}
+a{color:var(--energia);text-underline-offset:3px}a:active,.boton:active{transform:scale(.97)}.boton{transition:transform 160ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.boton:hover{filter:brightness(1.06)}}
+:focus-visible{outline:3px solid var(--foco);outline-offset:3px;border-radius:4px}:focus:not(:focus-visible){outline:none}
+.salto{position:absolute;inset-inline-start:1rem;top:-200px;z-index:60;background:var(--tinta);color:var(--acero);padding:.8rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:700}.salto:focus{top:.6rem}
+.contenedor{width:min(92%,68rem);margin-inline:auto}header.sitio{border-bottom:3px solid var(--negro)}
+[data-tema="oscuro"] header.sitio{border-bottom-color:var(--linea)}@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]) header.sitio{border-bottom-color:var(--linea)}}
+.barra{display:flex;align-items:center;gap:1rem;min-height:68px;max-height:80px}
+.marca{font-family:var(--font-titulo);font-size:1.25rem;letter-spacing:.02em;color:var(--tinta);text-decoration:none;display:flex;align-items:center;gap:.55rem;margin-inline-end:auto;min-height:44px;text-transform:uppercase}
+.marca i{width:14px;height:14px;background:var(--energia);display:inline-block;flex:none}
+nav.principal ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.principal a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .8rem;border-radius:6px;color:var(--tinta);text-decoration:none;font-weight:700;font-family:var(--font-cuerpo);text-transform:none}
+nav.principal a[aria-current="page"]{background:var(--negro);color:#fff}
+[data-tema="oscuro"] nav.principal a[aria-current="page"]{background:var(--energia);color:#14181C}@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]) nav.principal a[aria-current="page"]{background:var(--energia);color:#14181C}}
+.boton{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:44px;padding:.7rem 1.5rem;border-radius:var(--radio);background:var(--energia);color:#fff;text-decoration:none;font-weight:700;border:2px solid transparent;text-transform:uppercase;font-family:var(--font-titulo);letter-spacing:.03em}
+.boton.secundario{background:transparent;color:var(--tinta);border-color:var(--tinta)}
+button.tema,button.menu{background:transparent;border:1px solid var(--linea);border-radius:6px;color:var(--tinta);min-width:44px;min-height:44px;font:inherit;font-weight:700;padding:.4rem .7rem;cursor:pointer}button.menu{display:none}
+.hero{display:grid;gap:0;margin:clamp(1rem,2.5vw,1.5rem) 0 clamp(1.75rem,4vw,2.5rem);border:3px solid var(--negro);border-radius:8px;overflow:hidden;background:var(--chapa);box-shadow:8px 8px 0 color-mix(in srgb,var(--negro) 12%,transparent)}
+[data-tema="oscuro"] .hero{border-color:var(--linea)}@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]) .hero{border-color:var(--linea)}}
+@media (min-width:60rem){.hero{grid-template-columns:1fr 1fr}}
+.hero .texto{padding:clamp(1.75rem,4.5vw,3.25rem)}
+.hero figure{margin:0;min-height:300px;background:linear-gradient(140deg,#3A434B,#15191D)}
+.hero figure img{width:100%;height:100%;min-height:300px;object-fit:cover;object-position:center 40%;display:block;filter:saturate(1.15) contrast(1.06)}
+.hero figcaption{font-size:.85rem;color:var(--tinta-suave);padding:.6rem .2rem}
+.cupo{display:flex;align-items:baseline;gap:.9rem;margin:0 0 1rem}
+.cupo b{font-family:var(--font-titulo);font-weight:700;font-size:clamp(4rem,2.5rem + 6vw,6.5rem);line-height:1;color:var(--energia)}
+.cupo span{font-weight:700;max-width:16ch}
+.cinta{height:14px;background:repeating-linear-gradient(-45deg,var(--negro) 0 16px,var(--energia) 16px 32px);border-radius:4px;margin:0 0 2rem}
+[data-tema="oscuro"] .cinta{background:repeating-linear-gradient(-45deg,var(--linea) 0 16px,var(--energia) 16px 32px)}
+@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]) .cinta{background:repeating-linear-gradient(-45deg,var(--linea) 0 16px,var(--energia) 16px 32px)}}
+.gratis{background:var(--negro);color:#fff;border:3px solid var(--negro);border-radius:8px;padding:clamp(2rem,5vw,3.5rem) clamp(1.5rem,4vw,3rem);margin:0 0 2.5rem}
+.gratis .enorme{font-family:var(--font-titulo);text-transform:uppercase;font-size:clamp(2.6rem,1.5rem + 5.5vw,5rem);line-height:.95;margin:0 0 .8rem;max-width:12ch}
+.gratis p{margin:0;max-width:52ch}
+.gratis ul{margin:.8rem 0 1rem;padding:0;list-style:none}
+.gratis a{color:inherit}
+.sticky-wa{display:none}
+@media (max-width:52rem){.sticky-wa{display:flex;position:fixed;inset-inline:1rem;bottom:1rem;z-index:50;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.2rem;border-radius:6px;background:var(--energia);color:#fff;text-decoration:none;font-weight:700;font-family:var(--font-titulo);letter-spacing:.03em}body{padding-bottom:5rem}}
+@media (prefers-reduced-motion: reduce){.sticky-wa{animation:none !important;transition:none !important}}
+[data-tema="oscuro"] .gratis{background:var(--energia);border-color:var(--energia);color:#14181C}
+@media (prefers-color-scheme: dark){:root:not([data-tema="claro"]) .gratis{background:var(--energia);border-color:var(--energia);color:#14181C}}
+.grupo{transition:border-color 200ms var(--ease)}
+body{transition:background-color 200ms var(--ease),color 200ms var(--ease)}
+html.js .reveal{opacity:0;transform:translateY(14px)}
+html.js .reveal.visible{opacity:1;transform:none;transition:opacity 500ms var(--ease),transform 500ms var(--ease)}
+.acciones{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
+.grupos{display:grid;gap:1rem;margin:1.2rem 0 2.5rem}
+.grupo{border:1px solid var(--linea);border-inline-start:8px solid var(--energia);border-radius:0 var(--radio) var(--radio) 0;padding:1.2rem 1.4rem;background:color-mix(in srgb,var(--chapa) 75%,transparent)}
+.grupo h3{margin:0 0 .3rem;font-size:1.35rem}.grupo p{margin:0;color:var(--tinta)}.grupo p + p{margin-top:.4rem}
+@media (min-width:40rem){.grupos{grid-template-columns:1fr 1fr}}
+.tabla{width:100%;border-collapse:collapse;margin:1rem 0 2rem}.tabla caption{text-align:start;font-weight:700;margin-bottom:.5rem}.tabla th,.tabla td{text-align:start;padding:.7rem .6rem;border-top:2px solid var(--linea)}.tabla tbody tr:last-child th,.tabla tbody tr:last-child td{border-bottom:2px solid var(--linea)}
+footer.sitio{border-top:3px solid var(--negro);padding:2rem 0 3rem;color:var(--tinta-suave);font-size:.95rem;margin-top:2.5rem}footer.sitio nav ul{display:flex;gap:.25rem;flex-wrap:wrap;list-style:none;margin:0 0 1rem;padding:0}footer.sitio nav a{color:var(--tinta-suave);min-height:44px;display:inline-flex;align-items:center;padding:.4rem .6rem}
+.migas{font-size:.95rem;color:var(--tinta-suave);margin:1.2rem 0 0}.migas a{color:var(--tinta-suave)}
+img{max-width:100%;height:auto}
+@media (max-width:52rem){button.menu{display:inline-flex;align-items:center}nav.principal{display:none;width:100%}.barra{flex-wrap:wrap;padding-block:.6rem}.barra.abierta nav.principal{display:block}nav.principal ul{flex-direction:column;width:100%}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="sitio"><div class="contenedor barra" id="barra">
+<a class="marca" href="index.html"><i aria-hidden="true"></i>Bienestar para el Alma - Multiespacio</a>
+<button class="menu" id="btnMenu" aria-expanded="false" aria-controls="navPrincipal">Menú</button>
+<nav class="principal" id="navPrincipal" aria-label="Principal"><ul>
+<li><a href="index.html">Inicio</a></li><li><a href="yoga.html">Yoga</a></li><li><a href="ritmos.html">Ritmos</a></li><li><a href="funcional.html" aria-current="page">Funcional</a></li><li><a href="pnl.html">PNL</a></li>
+</ul></nav><button class="tema" id="btnTema" aria-label="Cambiar entre modo claro y oscuro">◐</button>
+</div></header>
+<main id="contenido" class="contenedor">
+<p class="migas"><a href="index.html">Inicio</a> / Funcional</p>
+<section class="hero" aria-labelledby="titulo">
+<div class="texto">
+<p class="cupo"><b aria-hidden="true">60</b><span>minutos por clase, martes y jueves</span></p>
+<h1 id="titulo">Funcional: fuerza para la vida real</h1>
+<p>Olvidate del espejo y del “no pain no gain”. Acá entrenamos para lo que hacés todos los días: subir las bolsas al tercer piso, atajar a tu hijo en la plaza, bancarte ocho horas sin contracturarte. Martes y jueves de 18:30 a 19:30hs, con Andrea y Adriana mirando tu técnica de verdad.</p>
+<div class="acciones"><a class="boton" href="#horarios">Ver horarios</a><a class="boton secundario" href="pnl.html">Ver PNL</a></div>
+</div>
+<figure><img src="img/funcional.jpg" alt="Kettlebells y elementos de entrenamiento funcional en un galpón" width="1600" height="1000" fetchpriority="high"><figcaption>El galpón un martes a las 18:30, listo para arrancar.</figcaption></figure>
+</section>
+<div class="cinta" aria-hidden="true"></div>
+<section aria-labelledby="t-niveles"><h2 id="t-niveles">El grupo, sin vueltas</h2>
+<div class="grupos reveal">
+<article class="grupo"><h3>Martes y jueves 18:30 a 19:30hs</h3><p>Peso corporal, bandas y mancuernas. Para arrancar de cero o volver después de mucho tiempo: adaptamos todo a tu nivel.</p><p>Reservá tu primera clase con <strong>Andrea</strong> o <strong>Adriana</strong> por WhatsApp.</p></article>
+</div></section>
+<section aria-labelledby="horarios"><h2 id="horarios">Grilla semanal</h2>
+<div style="overflow-x:auto"><table class="tabla"><caption>Martes y jueves 18:30 a 19:30hs</caption>
+<thead><tr><th scope="col">Día</th><th scope="col">Hora</th></tr></thead>
+<tbody>
+<tr><th scope="row">Martes y jueves</th><td>18:30 a 19:30hs</td></tr>
+</tbody></table></div></section>
+<section class="gratis reveal" aria-labelledby="t-reserva">
+<p class="enorme" id="t-reserva">Reservá tu primera clase</p>
+<p><strong>Vení a probar sin compromiso.</strong> Martes y jueves 18:30 a 19:30hs. Traé zapatillas con buena suela y contanos si tenés alguna lesión: adaptamos todo.</p>
+<ul>
+<li><a href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20funcional" target="_blank" rel="noopener">Andrea 03834 960554</a> · <a href="https://wa.me/5493834788148?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20funcional" target="_blank" rel="noopener">Adriana 03834 788148</a></li>
+</ul>
+<div class="acciones"><a class="boton" href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20funcional" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">Reservar por <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:1.15em;height:1.15em;flex:none;margin-inline-start:.45rem"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.5 21.5l4.7-1.2A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="#25D366" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 8.4c.2-.2.5-.2.7 0l1 1.2c.2.2.2.5 0 .7l-.6.6c.4.9 1.2 1.7 2.1 2.1l.6-.6c.2-.2.5-.2.7 0l1.2 1c.2.2.2.5 0 .7l-.7.7c-.3.3-.8.4-1.2.3-2.3-.6-4.3-2.6-4.9-4.9-.1-.4 0-.9.3-1.2l.8-.6z" fill="#25D366"/></svg></a></div>
+</section>
+</main>
+<footer class="sitio"><div class="contenedor">
+<nav aria-label="Secundaria"><ul><li><a href="index.html">Inicio</a></li><li><a href="yoga.html">Yoga</a></li><li><a href="ritmos.html">Ritmos</a></li><li><a href="funcional.html">Funcional</a></li><li><a href="pnl.html">PNL</a></li></ul></nav>
+<p><strong>Bienestar para el Alma - Multiespacio</strong> · Calle Julio Herrerra 100, Valle Viejo, Catamarca · <span id="anio"></span></p>
+<p style="font-size:.8rem">Sitio desarrollado por Arcana Lab</p>
+</div></footer>
+<a class="sticky-wa" href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20funcional" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp con Andrea">Reservar por <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:1.15em;height:1.15em;flex:none;margin-inline-start:.45rem"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.5 21.5l4.7-1.2A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="#25D366" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 8.4c.2-.2.5-.2.7 0l1 1.2c.2.2.2.5 0 .7l-.6.6c.4.9 1.2 1.7 2.1 2.1l.6-.6c.2-.2.5-.2.7 0l1.2 1c.2.2.2.5 0 .7l-.7.7c-.3.3-.8.4-1.2.3-2.3-.6-4.3-2.6-4.9-4.9-.1-.4 0-.9.3-1.2l.8-.6z" fill="#25D366"/></svg></a>
+<script>
+(function(){document.documentElement.classList.add("js");var barra=document.getElementById("barra");var btn=document.getElementById("btnMenu");btn.addEventListener("click",function(){var abierta=barra.classList.toggle("abierta");btn.setAttribute("aria-expanded",String(abierta));});var bTema=document.getElementById("btnTema");var clave="alma-tema";function aplicar(v){if(v==="auto"){document.documentElement.removeAttribute("data-tema");}else{document.documentElement.setAttribute("data-tema",v);}try{localStorage.setItem(clave,v);}catch(e){}}try{var g=localStorage.getItem(clave);if(g){aplicar(g);}}catch(e){}bTema.addEventListener("click",function(){var actual=document.documentElement.getAttribute("data-tema")||"auto";aplicar(actual==="oscuro"?"claro":"oscuro");});try{var r=document.querySelectorAll(".reveal");if("IntersectionObserver" in window&&r.length){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target);}});},{threshold:.15});r.forEach(function(el){o.observe(el);});}else{for(var i=0;i<r.length;i++){r[i].classList.add("visible");}}}catch(e){}
+document.getElementById("anio").textContent=new Date().getFullYear();})();
+</script>
+</body>
+</html>

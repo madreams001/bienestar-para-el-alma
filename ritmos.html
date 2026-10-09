@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Ritmos en Bienestar para el Alma - Multiespacio: martes y jueves 17:00 a 18:00hs, baile para transpirar riéndote.">
+<title>Ritmos — Bienestar para el Alma - Multiespacio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400&family=Lora:ital,wght@0,500;1,500&family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark light;--noche:#26110A;--noche-2:#37180C;--crema:#FBEEDC;--crema-suave:#E3C9A8;--linea:#5A3420;--ambar:#FFB347;--coral:#FF5A3C;--foco:#FFD58A;--radio:16px;--ease:cubic-bezier(.23,1,.32,1);--font-cuerpo:"Karla",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-titulo:"Karla",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-display:"Anton","Karla",system-ui,sans-serif}
+[data-tema="claro"]{--noche:#FBF1E2;--noche-2:#F5E2C8;--crema:#2A1409;--crema-suave:#6B4A30;--linea:#DFC39E;--ambar:#B25A1B;--coral:#C73E22;--foco:#0F6B4F}
+@media (prefers-color-scheme: light){:root:not([data-tema="oscuro"]):not([data-tema="claro"]){--noche:#FBF1E2;--noche-2:#F5E2C8;--crema:#2A1409;--crema-suave:#6B4A30;--linea:#DFC39E;--ambar:#B25A1B;--coral:#C73E22;--foco:#0F6B4F}}
+*{box-sizing:border-box}body{margin:0;background:var(--noche);color:var(--crema);font-family:var(--font-cuerpo);font-size:1.0625rem;line-height:1.65;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{line-height:1.05;margin:0 0 .7rem;font-weight:800;letter-spacing:-.02em}
+h1{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:clamp(3.4rem,1.6rem + 8vw,7.2rem);line-height:.92;letter-spacing:.01em;max-width:12ch;text-wrap:balance;overflow-wrap:break-word}h2{font-size:clamp(1.4rem,1.1rem + 1.4vw,2rem)}h2 em{font-family:"Lora",Georgia,serif;font-weight:500}
+p{margin:0 0 1rem;max-width:66ch}
+a{color:var(--ambar);text-underline-offset:3px}a:active,.boton:active{transform:scale(.97)}.boton{transition:transform 160ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.boton:hover{filter:brightness(1.08)}}
+:focus-visible{outline:3px solid var(--foco);outline-offset:3px;border-radius:4px}:focus:not(:focus-visible){outline:none}
+.salto{position:absolute;inset-inline-start:1rem;top:-200px;z-index:60;background:var(--crema);color:var(--noche);padding:.8rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:800}.salto:focus{top:.6rem}
+.contenedor{width:min(92%,68rem);margin-inline:auto}header.sitio{border-bottom:1px solid var(--linea);background:color-mix(in srgb,var(--noche) 92%,transparent)}
+.barra{display:flex;align-items:center;gap:1rem;min-height:68px;max-height:80px}
+.marca{font-weight:800;font-size:1.25rem;color:var(--crema);text-decoration:none;display:flex;align-items:center;gap:.55rem;margin-inline-end:auto;min-height:44px}
+.marca i{width:14px;height:14px;border-radius:50%;background:var(--coral);display:inline-block;flex:none;box-shadow:0 0 12px var(--coral)}
+nav.principal ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.principal a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .8rem;border-radius:10px;color:var(--crema);text-decoration:none;font-weight:700}
+nav.principal a[aria-current="page"]{background:color-mix(in srgb,var(--coral) 26%,transparent);color:var(--crema);outline:1px solid var(--coral)}
+.boton{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:44px;padding:.7rem 1.5rem;border-radius:999px;background:var(--coral);color:#fff;text-decoration:none;font-weight:800;border:2px solid transparent}
+.boton.secundario{background:transparent;color:var(--crema);border-color:var(--linea)}
+button.tema,button.menu{background:transparent;border:1px solid var(--linea);border-radius:10px;color:var(--crema);min-width:44px;min-height:44px;font:inherit;font-weight:700;padding:.4rem .7rem;cursor:pointer}button.menu{display:none}
+.hero{margin:clamp(1rem,2.5vw,1.5rem) 0;border-radius:20px;border:1px solid var(--linea);background:var(--noche-2);padding:clamp(1.5rem,4vw,3rem);display:grid;gap:clamp(1.5rem,3vw,2.5rem);align-items:center}
+@media (min-width:60rem){.hero{grid-template-columns:1.05fr .95fr}}
+.hero figure{margin:0;transform:rotate(-2deg);border:3px solid var(--coral);border-radius:14px;overflow:hidden;background:var(--noche);box-shadow:10px 10px 0 color-mix(in srgb,var(--coral) 30%,transparent)}
+.hero figure img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;display:block}
+.hero figcaption{padding:.6rem .9rem;font-size:.9rem;color:var(--crema-suave)}
+.hero h1 .sub{display:block;font-size:.6em}
+.quema{margin:0 0 2.5rem;background:var(--coral);color:#fff;border-radius:20px;padding:clamp(1.75rem,4vw,3rem);display:grid;gap:1rem;align-items:center}
+[data-tema="claro"] .quema{color:#2A1409}
+@media (prefers-color-scheme: light){:root:not([data-tema="oscuro"]):not([data-tema="claro"]) .quema{color:#2A1409}}
+@media (min-width:48rem){.quema{grid-template-columns:auto 1fr;gap:2.5rem}}
+.quema .gigante{font-family:var(--font-display);font-size:clamp(5rem,3rem + 10vw,10rem);line-height:.9;margin:0}
+.quema .gigante span{font-size:.28em;vertical-align:super}
+.quema h2{margin:0 0 .4rem;font-size:clamp(1.6rem,1.3rem + 2vw,2.4rem);text-transform:uppercase}
+.quema p{margin:0;max-width:44ch}
+details[open] > div{animation:entraRitmos 300ms var(--ease)}
+@keyframes entraRitmos{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+body{transition:background-color 200ms var(--ease),color 200ms var(--ease)}
+html.js .reveal{opacity:0;transform:translateY(14px)}
+html.js .reveal.visible{opacity:1;transform:none;transition:opacity 500ms var(--ease),transform 500ms var(--ease)}
+.hero .pulso{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.95rem;letter-spacing:.04em;color:var(--ambar);margin-bottom:.8rem}
+.hero .pulso svg{display:block}
+.acciones{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
+.lista{margin:1rem 0 2.5rem;padding:0;list-style:none;border-top:1px solid var(--linea)}
+.lista li{display:grid;gap:.2rem;padding:1.1rem .2rem;border-bottom:1px solid var(--linea)}
+.lista .txt strong{display:block;font-size:1.15rem}
+.lista .txt span{color:var(--crema-suave)}
+@media (min-width:40rem){.lista li{grid-template-columns:4.5rem 1fr;gap:0 1.2rem;align-items:baseline}}
+.lista .paso{font-family:var(--font-display);font-size:2.6rem;line-height:1;color:var(--coral)}
+@media (max-width:39.99rem){.lista .paso{font-size:1.6rem}}
+.tabla{width:100%;border-collapse:collapse;margin:1rem 0 2rem}.tabla caption{text-align:start;font-weight:700;margin-bottom:.5rem}.tabla th,.tabla td{text-align:start;padding:.7rem .6rem;border-top:1px solid var(--linea)}.tabla tbody tr:last-child th,.tabla tbody tr:last-child td{border-bottom:1px solid var(--linea)}
+details{border-top:1px solid var(--linea);padding:1rem .2rem}details:last-of-type{border-bottom:1px solid var(--linea)}summary{cursor:pointer;font-weight:800;min-height:44px;font-size:1.1rem}summary::marker{color:var(--coral)}
+details[open] summary{color:var(--ambar)}
+footer.sitio{border-top:1px solid var(--linea);padding:2rem 0 3rem;color:var(--crema-suave);font-size:.95rem;margin-top:2.5rem}footer.sitio nav ul{display:flex;gap:.25rem;flex-wrap:wrap;list-style:none;margin:0 0 1rem;padding:0}footer.sitio nav a{color:var(--crema-suave);min-height:44px;display:inline-flex;align-items:center;padding:.4rem .6rem}
+.migas{font-size:.95rem;color:var(--crema-suave);margin:1.2rem 0 0}.migas a{color:var(--crema-suave)}
+img{max-width:100%;height:auto}
+@media (max-width:52rem){button.menu{display:inline-flex;align-items:center}nav.principal{display:none;width:100%}.barra{flex-wrap:wrap;padding-block:.6rem}.barra.abierta nav.principal{display:block}nav.principal ul{flex-direction:column;width:100%}.hero figure{transform:rotate(0)}}
+.cta-reserva{margin:0 0 2.5rem;border:1px solid var(--linea);border-radius:20px;background:var(--noche-2);padding:clamp(1.5rem,4vw,2.5rem)}
+.cta-reserva h2{margin:0 0 .4rem;text-transform:uppercase}
+.cta-reserva p{margin:0 0 1rem;color:var(--crema-suave)}
+.cta-reserva ul{margin:.5rem 0 1rem;padding:0;list-style:none}
+.cta-reserva li{padding:.3rem 0}
+.sticky-wa{display:none}
+@media (max-width:52rem){.sticky-wa{display:flex;position:fixed;inset-inline:1rem;bottom:1rem;z-index:50;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.2rem;border-radius:999px;background:var(--coral);color:#fff;text-decoration:none;font-weight:800}body{padding-bottom:5rem}}
+@media (prefers-reduced-motion: reduce){.sticky-wa{animation:none !important;transition:none !important}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="sitio"><div class="contenedor barra" id="barra">
+<a class="marca" href="index.html"><i aria-hidden="true"></i>Bienestar para el Alma - Multiespacio</a>
+<button class="menu" id="btnMenu" aria-expanded="false" aria-controls="navPrincipal">Menú</button>
+<nav class="principal" id="navPrincipal" aria-label="Principal"><ul>
+<li><a href="index.html">Inicio</a></li><li><a href="yoga.html">Yoga</a></li><li><a href="ritmos.html" aria-current="page">Ritmos</a></li><li><a href="funcional.html">Funcional</a></li><li><a href="pnl.html">PNL</a></li>
+</ul></nav><button class="tema" id="btnTema" aria-label="Cambiar entre modo claro y oscuro">◐</button>
+</div></header>
+<main id="contenido" class="contenedor">
+<p class="migas"><a href="index.html">Inicio</a> / Ritmos</p>
+<section class="hero" aria-labelledby="titulo">
+<div class="texto">
+<p class="pulso"><svg width="72" height="18" viewBox="0 0 72 18" aria-hidden="true"><polyline points="0,9 12,9 18,3 24,15 30,9 42,9 48,4 54,14 60,9 72,9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Martes y jueves 17:00 a 18:00hs</p>
+<h1 id="titulo">Ritmos: <span class="sub">transpirar riéndote</span></h1>
+<p>Acá nadie te evalúa el paso. Ponemos cumbia, salsa, merengue y algún reguetón tranqui, y la profe Andrea te guía con señas grandes y gritos de aliento. Martes y jueves de 17:00 a 18:00hs. Salís contenta y con la remera para el lavarropas. Si tenés dos pies izquierdos, mejor: sos nuestra alumna favorita.</p>
+<div class="acciones"><a class="boton" href="#horarios">Ver horarios</a><a class="boton secundario" href="funcional.html">Ver Funcional</a></div>
+</div>
+<figure><img src="img/ritmos.jpg" alt="Salón de baile de noche con luces cálidas y gente bailando" width="1200" height="900" fetchpriority="high"><figcaption>El salón un jueves a las 17:00, lleno y contento.</figcaption></figure>
+</section>
+<section class="quema reveal" aria-label="El formato de la clase">
+<p class="gigante" aria-hidden="true">60<span>min</span></p>
+<div><h2>Nada de coreos imposibles</h2><p>Clases de 60 minutos, martes y jueves de 17:00 a 18:00hs. Entrás en calor con cumbia, alternás salsa y merengue, y cerrás con el tema que pide el grupo. Parás a tomar agua cuando querés.</p></div>
+</section>
+<section aria-labelledby="horarios"><h2 id="horarios">Horarios, <em>sin vueltas</em></h2>
+<div style="overflow-x:auto"><table class="tabla"><caption>Clases de 60 minutos, martes y jueves 17:00 a 18:00hs</caption>
+<thead><tr><th scope="col">Grupo</th><th scope="col">Días</th><th scope="col">Hora</th></tr></thead>
+<tbody>
+<tr><th scope="row">Único</th><td>Martes y jueves</td><td>17:00 a 18:00hs</td></tr>
+</tbody></table></div></section>
+<section aria-labelledby="t-noche"><h2 id="t-noche">¿Qué pasa en una noche típica?</h2>
+<ul class="lista reveal">
+<li><span class="paso" aria-hidden="true">1</span><div class="txt"><strong>Entrada en calor con cumbia</strong><span>10 minutos de pasos base. Nadie se queda quieto ni el primer día.</span></div></li>
+<li><span class="paso" aria-hidden="true">2</span><div class="txt"><strong>Bloques de salsa y merengue</strong><span>30 minutos alternando ritmos. Parás a tomar agua cuando quieras, sin pedir permiso.</span></div></li>
+<li><span class="paso" aria-hidden="true">3</span><div class="txt"><strong>Cierre cantado</strong><span>Último tema a pedido del grupo, con coreo inventada entre todos.</span></div></li>
+</ul></section>
+<section aria-labelledby="t-dudas"><h2 id="t-dudas">Dudas comunes</h2>
+<details open><summary>¿Necesito saber bailar?</summary><div><p>No. El 80% arranca diciendo eso mismo. Los pasos se repiten tanto que a la tercera clase ya los hacés dormida.</p></div></details>
+<details><summary>¿Qué me pongo?</summary><div><p>Zapas cómodas, ropa que te deje moverte y una botellita de agua. Acá no hay dress code ni espejos que juzguen.</p></div></details>
+</section>
+<section class="cta-reserva reveal" aria-labelledby="t-reserva"><h2 id="t-reserva">Reservá tu primera clase de ritmos</h2>
+<p>Martes y jueves 17:00 a 18:00hs. Escribinos y coordinamos con Andrea o Adriana.</p>
+<ul>
+<li><a href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20ritmos" target="_blank" rel="noopener">Andrea 03834 960554</a> · <a href="https://wa.me/5493834788148?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20ritmos" target="_blank" rel="noopener">Adriana 03834 788148</a></li>
+</ul>
+<div class="acciones"><a class="boton" href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20ritmos" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">Reservar por <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:1.15em;height:1.15em;flex:none;margin-inline-start:.45rem"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.5 21.5l4.7-1.2A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="#25D366" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 8.4c.2-.2.5-.2.7 0l1 1.2c.2.2.2.5 0 .7l-.6.6c.4.9 1.2 1.7 2.1 2.1l.6-.6c.2-.2.5-.2.7 0l1.2 1c.2.2.2.5 0 .7l-.7.7c-.3.3-.8.4-1.2.3-2.3-.6-4.3-2.6-4.9-4.9-.1-.4 0-.9.3-1.2l.8-.6z" fill="#25D366"/></svg></a></div>
+</section>
+</main>
+<footer class="sitio"><div class="contenedor">
+<nav aria-label="Secundaria"><ul><li><a href="index.html">Inicio</a></li><li><a href="yoga.html">Yoga</a></li><li><a href="ritmos.html">Ritmos</a></li><li><a href="funcional.html">Funcional</a></li><li><a href="pnl.html">PNL</a></li></ul></nav>
+<p><strong>Bienestar para el Alma - Multiespacio</strong> · Calle Julio Herrerra 100, Valle Viejo, Catamarca · <span id="anio"></span></p>
+<p style="font-size:.8rem">Sitio desarrollado por Arcana Lab</p>
+</div></footer>
+<a class="sticky-wa" href="https://wa.me/5493834960554?text=Hola%20Bienestar%20para%20el%20Alma%2C%20quiero%20info%20sobre%20ritmos" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp con Andrea">Reservar por <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:1.15em;height:1.15em;flex:none;margin-inline-start:.45rem"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.5 21.5l4.7-1.2A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="#25D366" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 8.4c.2-.2.5-.2.7 0l1 1.2c.2.2.2.5 0 .7l-.6.6c.4.9 1.2 1.7 2.1 2.1l.6-.6c.2-.2.5-.2.7 0l1.2 1c.2.2.2.5 0 .7l-.7.7c-.3.3-.8.4-1.2.3-2.3-.6-4.3-2.6-4.9-4.9-.1-.4 0-.9.3-1.2l.8-.6z" fill="#25D366"/></svg></a>
+<script>
+(function(){document.documentElement.classList.add("js");var barra=document.getElementById("barra");var btn=document.getElementById("btnMenu");btn.addEventListener("click",function(){var abierta=barra.classList.toggle("abierta");btn.setAttribute("aria-expanded",String(abierta));});var bTema=document.getElementById("btnTema");var clave="alma-tema";function aplicar(v){if(v==="auto"){document.documentElement.removeAttribute("data-tema");}else{document.documentElement.setAttribute("data-tema",v);}try{localStorage.setItem(clave,v);}catch(e){}}try{var g=localStorage.getItem(clave);if(g){aplicar(g);}}catch(e){}bTema.addEventListener("click",function(){var actual=document.documentElement.getAttribute("data-tema")||"auto";aplicar(actual==="oscuro"?"claro":"oscuro");});try{var r=document.querySelectorAll(".reveal");if("IntersectionObserver" in window&&r.length){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target);}});},{threshold:.15});r.forEach(function(el){o.observe(el);});}else{for(var i=0;i<r.length;i++){r[i].classList.add("visible");}}}catch(e){}
+document.getElementById("anio").textContent=new Date().getFullYear();})();
+</script>
+</body>
+</html>
